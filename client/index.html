@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Back End Assessment</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+<body>
+  <header>
+    <h1>Back End Assessment</h1>
+</header>
+<main>
+
+<form>
+    <input 
+        type='text'
+        id="compliment"
+        placeholder="Choose your compliment! ..."/>
+    <button>add compliment</button>
+
+    <input 
+        type='text'
+        id="fortune"
+        placeholder='Choose your fortune! ...'/>
+    <button>add fortune</button>
+
+    <input 
+        type='text'
+        id="card"
+        placeholder='Choose your card! ...'/>
+    <button>add card</button>
+
+        <input 
+        type='text'
+        id="photo"
+        placeholder='Choose your photo! ...'/>
+    <button>add photo</button>
+
+    <input 
+        type='text'
+        id="flower"
+        placeholder='Choose your flower! ...'/>
+    <button>add flower</button>
+</form>
+
+
+<section id="assignment"></section>
+
+</main>
+</body>
+
+
+  <body class="container">
+    <button id="complimentButton">Get a compliment</button>
+    <input  />
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      document.getElementById("complimentButton").onclick = function () {
+        axios.get("http://localhost:4000/api/compliment/")
+            .then(function (response) {
+              const data = response.data;
+              alert(data);
+            });
+      };
+    </script>
+
+
+
+<!--create a new feature that allows the user to get a random fortune, similar to the kind you would see in a fortune cookie---->
+
+<button id="fortunesButton">Get a fortunes</button>
+<input  />
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+  document.getElementById("fortunesButton").onclick = function () {
+    axios.get("http://localhost:4000/api/fortunes/")
+        .then(function (response) {
+          const data = response.data;
+          alert(data);
+        });
+  };
+</script>
+
+
+<!--Come up with 3 additional features you would like to add to this website. first feature---->
+
+<button id="cardsButton">Get a Cards</button>
+<input  />
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+  document.getElementById("cardsButton").onclick = function () {
+    axios.get("http://localhost:4000/api/cards/")
+        .then(function (response) {
+          const data = response.data;
+          alert(data);
+        });
+  };
+</script>
+
+
+
+
+
+<!--Come up with 3 additional features you would like to add to this website. second feature---->
+
+<button id="photosButton">Get a Photos</button>
+<input  />
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+  document.getElementById("photosButton").onclick = function () {
+    axios.get("http://localhost:4000/api/photos/")
+        .then(function (response) {
+          const data = response.data;
+          alert(data);
+        });
+  };
+</script>
+
+
+
+
+
+<!--Come up with 3 additional features you would like to add to this website. third feature---->
+
+<button id="flowerButton">Get a Flowers</button>
+<input  />
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+  document.getElementById("flowerButton").onclick = function () {
+    axios.get("http://localhost:4000/api/flowers/")
+        .then(function (response) {
+          const data = response.data;
+          alert(data);
+        });
+  };
+</script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="main.js"></script>
+  </body>
+</html>
