@@ -1,0 +1,72 @@
+* {
+  border: 3px solid green;
+    padding : 10px;
+}
+
+h1{
+  background-color: rgb(8, 51, 53);
+  width: 350px;
+  height: 75px;
+  align-items: center;
+  position: relative;
+  display: flex;
+  justify-content: center; 
+}
+body {
+  background-color: rgb(21, 149, 153);
+}
+
+header {
+  height: 80px; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  color: rgb(38, 180, 180);
+}
+
+main {
+  background-color: rgb(86, 160, 117);
+  display: flex; 
+  justify-content: center;
+}
+
+form {
+  width: 890px;
+  height: 550px;
+  background-color: rgb(67, 165, 165);
+  position: relative;
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-evenly; 
+  align-items: center;
+  margin: 50px;
+}
+
+button {
+  background-color: #99caac;
+  width: 75px;
+  height: 85px;
+  color: rgb(6, 8, 8);
+  border:  chartreuse ;
+    margin: 5px;
+}
+
+input[type='text'] {
+  width: 65%;
+  height: 30px;
+  border: none;
+  border-bottom: 2px solid #232323;
+  color: #51a52d;
+  background-color: snow;
+}
+
+#assignment {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
