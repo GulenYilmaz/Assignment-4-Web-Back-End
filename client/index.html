@@ -4,50 +4,93 @@
     <title>Back End Assessment</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-<body>
+<body class= "bodyclass">
   <header>
     <h1>Back End Assessment</h1>
 </header>
 <main>
 
+
+<!-- buttons-->
 <form>
     <input 
         type='text'
-        id="compliment"
-        placeholder="Choose your compliment! ..."/>
-    <button>add compliment</button>
+        id="userInputs-compliment"
+        placeholder="Choose your compliment! ..."
+        value=" Add compliment here"/>
+        <input type="submit" value ="submit">
+        
+        <select id="compliment" name="compliment-name">
+          <option value="Gee, you're a smart cookie!">Gee, you're a smart cookie!</option>
+          <option value="Cool shirt!">Cool shirt!</option>
+          <option value="Your Javascript skills are stellar.">Your Javascript skills are stellar</option>
+          <option value="A pleasant surprise is waiting for you">A pleasant surprise is waiting for you</option>
+          <option value="Believe it can be done">Believe it can be done</option>
+        </select>
+    <button id="complimentButton">Get a compliment</button>
 
     <input 
         type='text'
-        id="fortune"
-        placeholder='Choose your fortune! ...'/>
-    <button>add fortune</button>
+        id="userInputs-fortune"
+        placeholder='Choose your fortune! ...'
+        value=" Add fortunes here"/>
+        <input type="submit" value ="submit">
+        <select id="fortune" name="fortune">
+          <option value="mondaCuriosity kills boredom. Nothing can kill curiosityy">Curiosity kills boredom. Nothing can kill curiosity</option>
+          <option value="Happiness will bring you good luck.">Happiness will bring you good luck.</option>
+          <option value="Happiness begins with facing life with a smile and a wink">Happiness begins with facing life with a smile and a wink</option>
+          
+        </select>
+    <button id="fortuneButton">Get a fortune</button>
 
     <input 
         type='text'
-        id="card"
-        placeholder='Choose your card! ...'/>
-    <button>add card</button>
+        id="userInputs-card"
+        placeholder='Choose your card! ...'
+        value=" Add card here"/>
+        <input type="submit" value ="submit">
+        <select id="card" name="card">
+          <option value="birthday cards">birthday cards</option>
+          <option value="Annuversary cards">Annuversary cards</option>
+        </select>
+    <button id="cardButton">Get a card</button>
 
         <input 
         type='text'
-        id="photo"
-        placeholder='Choose your photo! ...'/>
-    <button>add photo</button>
+        id="userInputs-photo"
+        placeholder='Choose your photo! ...'
+        value=" Add photo here"/>
+        <input type="submit" value ="submit">
+        <select id="photos" name="photos">
+          <option value="birthday photos">birthday photos</option>
+          <option value="Congrat photos">Congrat photos</option>
+          <option value="Good luck photos">Good luck photos</option>
+        </select>
+    <button id="photoButton">Get a photo</button>
 
     <input 
         type='text'
-        id="flower"
-        placeholder='Choose your flower! ...'/>
-    <button>add flower</button>
+        id="userInputs-flower"
+        placeholder='Choose your flower! ...'
+        value=" Add flower here"/>
+        <input type="submit" value ="submit">
+        <select id="flower" name="flower">
+          <option value="Annuversary flowers">Annuversary flowers</option>
+          <option value="birthday flowers">birthday flowers</option>
+        </select>
+    <button id="flowerButton">Get a flower</button>
 </form>
 </main>
 </body>
+
+
 
   <body class="container">
     <button id="complimentButton">Get a compliment</button>
     <input  />
 
+
+    <!--handle comliment button-->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
       document.getElementById("complimentButton").onclick = function () {
@@ -65,7 +108,7 @@
 
 <button id="fortunesButton">Get a fortunes</button>
 <input  />
-
+<!--handle fortune button-->
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
   document.getElementById("fortunesButton").onclick = function () {
@@ -77,12 +120,50 @@
   };
 </script>
 
+<!--calling display function-->
+<script>
+const displayEvent = ({ data: events }) => displayEvent(events);
+</script>
+<script>
+  function displayEvent(arr) {
+    let box = document.querySelectorAll('new');
+    for(let i = 0; i < box.length; i++) {
+      box[i].innerHTML = ``;
+    };
+    for (let i = 0; i < arr.length; i++) {
+      neweventStructure(arr[i]);
+    }
+  }
+</script>
+
+<!--POST-->
+<script>
+  const eventForm = document.querySelector("#ew-Event");
+  const newEvent = (body) => {
+    axios.post("http://localhost:4000/api/events/", body)
+          .then(displayEvent);
+  };
+</script>
+
+<!--DELETE-->
+<script>
+  const deleteEvent = (id) => {
+    axios.delete(`http://localhost:4000/api/events/${id}`)
+    .then(displayEvent);
+  };
+</script>
+
+
+
+
+
+
 
 <!--Come up with 3 additional features you would like to add to this website. first feature---->
 
 <button id="cardsButton">Get a Cards</button>
 <input  />
-
+<!--handle card button-->
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
   document.getElementById("cardsButton").onclick = function () {
@@ -102,7 +183,7 @@
 
 <button id="photosButton">Get a Photos</button>
 <input  />
-
+<!--handle photo button-->
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
   document.getElementById("photosButton").onclick = function () {
@@ -122,7 +203,7 @@
 
 <button id="flowerButton">Get a Flowers</button>
 <input  />
-
+<!--handle flower button-->
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
   document.getElementById("flowerButton").onclick = function () {
@@ -133,7 +214,13 @@
         });
   };
 </script>
+
+
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="main.js"></script>
   </body>
 </html>
+
+<script>
+  const 
+</script>

@@ -1,12 +1,12 @@
 * {
   border: 3px solid green;
-    padding : 10px;
+    padding : 0px;
 }
 
 h1{
   background-color: rgb(8, 51, 53);
-  width: 350px;
-  height: 75px;
+  width: 740px;
+  height: 95px;
   align-items: center;
   position: relative;
   display: flex;
@@ -31,7 +31,7 @@ main {
 }
 
 form {
-  width: 890px;
+  width: 1190px;
   height: 550px;
   background-color: rgb(67, 165, 165);
   position: relative;
@@ -45,14 +45,14 @@ form {
 button {
   background-color: #99caac;
   width: 95px;
-  height: 95px;
+  height: 85px;
   color: rgb(6, 8, 8);
   border:  chartreuse ;
     margin: 5px;
 }
 
 input[type='text'] {
-  width: 65%;
+  width: 55%;
   height: 30px;
   border: none;
   border-bottom: 2px solid #232323;
